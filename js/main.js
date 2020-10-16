@@ -1,6 +1,5 @@
 const cartButton = document.querySelector('#cart-button');
 const modal = document.querySelector('.modal');
-const modalDialog = document.querySelector('.modal-dialog');
 const closeButtons = document.querySelectorAll('#button-close');
 
 cartButton.addEventListener("click", function () {
@@ -13,6 +12,19 @@ for (let close of closeButtons) {
   });
 };
 
-// function toggleModal() {
-//   modal.classList.toggle('is-open');
-// }
+const buttons = document.querySelectorAll('.button-primary');
+
+for (let button of buttons) {
+  button.onmousedown = function () {
+    button.classList.add('is-clicked');
+  }
+}
+
+for (let button of buttons) {
+  button.onmouseup = function () {
+    button.classList.remove('is-clicked');
+  }
+  button.onmouseout = function () {
+    button.classList.remove('is-clicked');
+  }
+}

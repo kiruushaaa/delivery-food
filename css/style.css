@@ -72,9 +72,18 @@ body {
 
 .button-primary {
   background: #1890ff;
-  border: 1px solid #1890ff;
+  border-color: #1890ff;
   color: #fff;
   margin-right: 10px;
+}
+
+.button-primary:hover {
+  background-color: #1477d4;
+  border-color: #1477d4;
+}
+
+.is-clicked {
+  line-height: 22px;
 }
 
 .button-icon {
